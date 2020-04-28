@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
+import * as courseActions from '../../redux/actions/courseActions'
 
 class CoursesPage extends Component {
 
@@ -46,6 +47,12 @@ class CoursesPage extends Component {
             <
             /form>
         )
+    }
+}
+
+function mapStateToProps(state, ownProps){
+    return {
+        courses: state.courses
     }
 }
 
