@@ -3,7 +3,9 @@ import rootReducer from './reducers'
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant'
 
 export default function configureStore(initialState){
-	const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSIONS_COMPOSE
+	//adds support for redux dev tools
+	const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose 
+
 	return createStore(
 		rootReducer,
 		initialState, 
