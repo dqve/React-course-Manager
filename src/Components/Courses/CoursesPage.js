@@ -49,4 +49,4 @@ class CoursesPage extends Component {
     }
 }
 
-export default CoursesPage
+export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage)

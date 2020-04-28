@@ -74,7 +74,7 @@
 
 ## Author
 
-* **David Ayo** - *Initial work* - [David Ayo](https://github.com/dqve)
+* **David Ayo**⚡⚡  - *Initial work* - [David Ayo](https://github.com/dqve)
 
 
 ## License
@@ -84,4 +84,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * [Building Applications in React and Redux](http://www.pluralsight.com/author/cory-house) on Pluralsight
-* Black coffee
+* Black ☕☕
