@@ -6,6 +6,8 @@ import App from "./Components/App"
 import "./index.css"
 import configureStore from './redux/configureStore'
 
+const store = configureStore()
+
 render(
   <Router>
 	<App />
