@@ -1,6 +1,6 @@
 # React Course Manager
 
-### Built with React and redux
+### Built with React and Redux
  
 
 ## Get Started
