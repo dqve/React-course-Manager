@@ -56,4 +56,4 @@ function mapStateToProps(state, ownProps){
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage)
+export default connect(mapStateToProps)(CoursesPage)
