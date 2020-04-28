@@ -1,8 +1,7 @@
 # React Course Manager
 
 ### Built with React and redux
-
-Based off the [Building Applications in React and Redux Course](http://www.pluralsight.com/author/cory-house) on Pluralsight 
+ 
 
 ## Get Started
 
@@ -72,3 +71,17 @@ Based off the [Building Applications in React and Redux Course](http://www.plura
 | webpack-bundle-analyzer         | Generate report of what's in the app's production bundle         |
 | webpack-cli                     | Run Webpack via the command line                                 |
 | webpack-dev-server              | Serve app via Webpack                                            |
+
+## Author
+
+* **David Ayo** - *Initial work* - [David Ayo](https://github.com/dqve)
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* [Building Applications in React and Redux](http://www.pluralsight.com/author/cory-house) on Pluralsight
+* Black coffee
