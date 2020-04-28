@@ -2,7 +2,7 @@
 
 ### Built with React and redux
 
-Using Starter Kit for [Building Applications in React and Redux](http://www.pluralsight.com/author/cory-house) on Pluralsight
+Based off the [Building Applications in React and Redux Course](http://www.pluralsight.com/author/cory-house) on Pluralsight 
 
 ## Get Started
 
