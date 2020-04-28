@@ -84,4 +84,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * [Building Applications in React and Redux](http://www.pluralsight.com/author/cory-house) on Pluralsight
-* Black ☕☕
+* Black Coffee ☕☕
