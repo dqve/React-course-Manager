@@ -1,25 +1,31 @@
-import React from "react";
+import React, {Component} from "react";
 import { connect } from "react-redux";
 import * as courseActions from "../../redux/actions/courseActions";
 import PropTypes from "prop-types";
 import { bindActionCreators } from "redux";
 
-class CoursesPage extends React.Component {
-  state = {
-    course: {
-      title: ""
+class CoursesPage extends Component {
+
+    state = {
+        course: {
+            title: ""
+        }
     }
-  };
 
-  handleChange = event => {
-    const course = { ...this.state.course, title: event.target.value };
-    this.setState({ course });
-  };
+    handleChange = event => {
+        const course = {
+            ...this.state.course,
+            title: event.target.value
+        }
+        this.setState({
+            course
+        })
+    }
 
-  handleSubmit = event => {
-    event.preventDefault();
-    this.props.actions.createCourse(this.state.course);
-  };
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.props.dispatch(courseActions.createCourse(this.state.course))
+    }
 
   render() {
     return (
