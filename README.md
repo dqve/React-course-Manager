@@ -74,7 +74,7 @@
 
 ## Author
 
-* **David Ayo**⚡⚡  - *Initial work* - [David Ayo](https://twitter.com/dqve__)
+* **David Ayo**⚡⚡  - *Initial work* - [David Ayo 🐦](https://twitter.com/dqve__)
 
 
 ## License
