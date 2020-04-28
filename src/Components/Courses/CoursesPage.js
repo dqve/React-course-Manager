@@ -1,8 +1,6 @@
-import React, {Component} from "react";
-import { connect } from "react-redux";
-import * as courseActions from "../../redux/actions/courseActions";
-import PropTypes from "prop-types";
-import { bindActionCreators } from "redux";
+import React, {Component} from 'react'
+import { connect } from 'react-redux'
+import * as courseActions from '../../redux/actions/courseActions'
 
 class CoursesPage extends Component {
 
@@ -26,45 +24,37 @@ class CoursesPage extends Component {
         event.preventDefault()
         this.props.dispatch(courseActions.createCourse(this.state.course))
     }
+    
+    render() {
 
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <h2>Courses</h2>
-        <h3>Add Course</h3>
-        <input
-          type="text"
-          onChange={this.handleChange}
-          value={this.state.course.title}
-        />
-
-        <input type="submit" value="Save" />
-        {this.props.courses.map(course => (
-          <div key={course.title}>{course.title}</div>
-        ))}
-      </form>
-    );
-  }
+        return ( <
+            form onSubmit = {
+                this.handleSubmit
+            } >
+            <
+            h2 > Courses < /h2>  <
+            h3 > Add Courses < /h3>  <
+            input type = "text"
+            onChange = {
+                this.handleChange
+            }
+            value = {
+                this.state.course.title
+            }
+            />  <
+            input type = "submit"
+            value = "submit" /
+            >
+            <
+            /form>
+        )
+    }
 }
 
-CoursesPage.propTypes = {
-  courses: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired
-};
-
-function mapStateToProps(state) {
-  return {
-    courses: state.courses
-  };
+function mapStateToProps(state, ownProps){
+    return {
+        courses: state.courses
+    }
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(courseActions, dispatch)
-  };
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CoursesPage);
+export default connect(mapStateToProps)(CoursesPage)
