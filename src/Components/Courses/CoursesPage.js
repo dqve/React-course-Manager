@@ -5,52 +5,40 @@ import PropTypes from "prop-types"
 import { bindActionCreators } from "redux"
 
 class CoursesPage extends Component {
-
-    state = {
-        course: {
-            title: ""
-        }
+  state = {
+    course: {
+      title: ""
     }
+  };
 
-    handleChange = event => {
-        const course = {
-            ...this.state.course,
-            title: event.target.value
-        }
-        this.setState({
-            course
-        })
-    }
+  handleChange = event => {
+    const course = { ...this.state.course, title: event.target.value };
+    this.setState({ course });
+  };
 
-    handleSubmit = (event) => {
-        event.preventDefault()
-        this.props.dispatch(courseActions.createCourse(this.state.course))
-    }
+  handleSubmit = event => {
+    event.preventDefault();
+    this.props.dispatch(courseActions.createCourse(this.state.course))
+  };
 
-    render() {
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <h2>Courses</h2>
+        <h3>Add Course</h3>
+        <input
+          type="text"
+          onChange={this.handleChange}
+          value={this.state.course.title}
+        />
 
-        return ( 
-            <form onSubmit = {
-                this.handleSubmit
-            }>
-            <h2> Courses < /h2>  
-            <h3> Add Courses </h3>
-            <input type = "text"
-            onChange = {
-                this.handleChange
-            }
-            value = {
-                this.state.course.title
-            }
-            />  
-            <input type = "submit"
-            value = "submit" />
-             {this.props.courses.map(course => (
+        <input type="submit" value="Save" />
+        {this.props.courses.map(course => (
           <div key={course.title}>{course.title}</div>
         ))}
-            </form>
-        )
-    }
+      </form>
+    );
+  }
 }
 
 CoursesPage.propTypes = {
@@ -58,10 +46,16 @@ CoursesPage.propTypes = {
   actions: PropTypes.object.isRequired
 };
 
-function mapStateToProps(state, ownProps){
-    return {
-        courses: state.courses
-    }
+function mapStateToProps(state) {
+  return {
+    courses: state.courses
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(courseActions, dispatch)
+  };
 }
 
 export default connect(mapStateToProps)(CoursesPage)
