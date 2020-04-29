@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import HomePage from "./home/HomePage";
-import AboutPage from "./about/AboutPage";
-import Header from "./common/Header";
+import HomePage from "./Home/HomePage";
+import AboutPage from "./About/AboutPage";
+import Header from "./Common/Header";
 import PageNotFound from "./PageNotFound";
-import CoursesPage from "./courses/CoursesPage";
+import CoursesPage from "./Courses/CoursesPage";
 
 function App() {
   return (
