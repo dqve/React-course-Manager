@@ -16,9 +16,7 @@ class CoursesPage extends React.Component {
     return (
       <>
         <h2>Courses</h2>
-        {this.props.courses.map(course => (
-          <div key={course.title}>{course.title}</div>
-        ))}
+        <CourseList courses={this.props.courses} />
       </>
     )
   }
