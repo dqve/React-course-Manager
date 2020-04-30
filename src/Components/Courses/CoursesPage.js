@@ -12,6 +12,9 @@ class CoursesPage extends React.Component {
       this.props.actions.loadCourses().catch(error => {
         alert("Loading courses failed" + error)
       })
+      this.props.actions.loadAuthors().catch(error => {
+        alert("Loading authors failed" + error)
+      })
     }
 
    render() {
@@ -31,7 +34,16 @@ CoursesPage.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    courses: state.courses
+    courses:
+    state.authors.length === 0
+        ? []
+        : state.courses.map(course => {
+            return {
+              ...course,
+              authorName: state.authors.find(a => a.id === course.authorId).name
+            }
+          }),
+    authors: state.authors
   };
 }
 
