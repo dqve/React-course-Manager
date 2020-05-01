@@ -7,32 +7,30 @@ import PropTypes from "prop-types"
 
 function ManageCoursePage({ courses, authors, actions, loadCourses, loadAuthors }) {
   
-  useEffect(() => {
-    
-
-    if (courses.length === 0) {
-      loadCourses().catch(error => {
-        alert("Loading courses failed" + error)
-      })
-    }
-
-    if (courses.length === 0) {
-      loadAuthors().catch(error => {
-        alert("Loading authors failed" + error)
-      })
-    }
-  })
+    useEffect(() => {
 
 
+        if (courses.length === 0) {
+            loadCourses().catch(error => {
+                alert("Loading courses failed" + error)
+            })
+        }
 
-   render() {
+        if (courses.length === 0) {
+            loadAuthors().catch(error => {
+                alert("Loading authors failed" + error)
+            })
+        }
+    }, [])
+
+
+
     return (
       <>
         <h2>Manage Course</h2>
       </>
     )
   }
-}
 
 ManageCoursePage.propTypes = {
   courses:     PropTypes.array.isRequired,
