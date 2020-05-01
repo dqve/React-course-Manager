@@ -1,9 +1,8 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import * as courseActions from "../../redux/actions/courseActions"
-import * as authorActions from "../../redux/actions/authorActions"
+import { loadCourses, /*saveCourse*/ } from "../../redux/actions/courseActions"
+import { loadAuthors } from "../../redux/actions/authorActions"
 import PropTypes from "prop-types"
-import { bindActionCreators } from "redux"
 
 
 class ManageCoursePage extends Component {
@@ -35,9 +34,10 @@ class ManageCoursePage extends Component {
 }
 
 ManageCoursePage.propTypes = {
-  courses: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired,
-  authors: PropTypes.array.isRequired
+  courses:     PropTypes.array.isRequired,
+  authors:     PropTypes.array.isRequired,
+  loadCourses: PropTypes.func.isRequired,
+  loadAuthors: PropTypes.func.isRequired,
 };
 
 function mapStateToProps(state) {
