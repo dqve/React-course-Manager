@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 import CourseForm from "./CourseForm"
 import { newCourse } from "../../../tools/mockData"
 
-function ManageCoursePage({ courses, authors, actions, loadCourses, loadAuthors, saveCourse, ...props }) {
+function ManageCoursePage({ courses, authors, actions, loadCourses, loadAuthors, saveCourse, history, ...props }) {
     const [ course, setCourse ] = useState({...props.course})
     const [errors, setErrors] = useState({});
 
@@ -60,10 +60,12 @@ ManageCoursePage.propTypes = {
   authors:     PropTypes.array.isRequired,
   loadCourses: PropTypes.func.isRequired,
   loadAuthors: PropTypes.func.isRequired,
-  saveCourse:  PropTypes.func.isRequired
+  saveCourse:  PropTypes.func.isRequired,
+  history:     PropTypes.object.isRequired
 };
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
+  const slug = ownProps.match.params.slug
   return {
     course:  newCourse,
     courses: state.courses,
