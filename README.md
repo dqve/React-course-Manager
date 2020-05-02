@@ -85,3 +85,15 @@
 
 * [Building Applications in React and Redux](http://www.pluralsight.com/author/cory-house) on Pluralsight
 * Black Coffee ☕☕
+
+## Next Steps
+
+* Clean up UI
+* Add Home page
+* Add signup and sign in functions
+* Add user profile page
+* Add user dashbaord
+* Optimize tests
+* Take screenshots
+* Add screenshots to README
+* Dust sandals and move on
