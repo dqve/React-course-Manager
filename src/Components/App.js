@@ -1,11 +1,13 @@
-import React from "react"
-import { Route, Switch } from "react-router-dom"
-import HomePage from "./Home/HomePage"
-import AboutPage from "./About/AboutPage"
-import Header from "./Common/Header"
-import PageNotFound from "./PageNotFound"
-import CoursesPage from "./Courses/CoursesPage"
-import ManageCoursePage from "./Courses/ManageCoursePage"
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import HomePage from "./Home/HomePage";
+import AboutPage from "./About/AboutPage";
+import Header from "./Common/Header";
+import PageNotFound from "./PageNotFound";
+import CoursesPage from "./Courses/CoursesPage";
+import ManageCoursePage from "./Courses/ManageCoursePage"; // eslint-disable-line import/no-named-as-default
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -19,8 +21,9 @@ function App() {
         <Route path="/course" component={ManageCoursePage} />
         <Route component={PageNotFound} />
       </Switch>
+      <ToastContainer autoClose={3000} hideProgressBar />
     </div>
-  )
+  );
 }
 
 export default App;
