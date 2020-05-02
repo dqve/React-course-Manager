@@ -11,19 +11,21 @@ function ManageCoursePage({ courses, authors, actions, loadCourses, loadAuthors,
     const [errors, setErrors] = useState({});
 
     useEffect(() => {
-
         if (courses.length === 0) {
             loadCourses().catch(error => {
-                alert("Loading courses failed" + error)
+                alert("Loading courses failed" + error);
+            })
+        } else {
+            setCourse({...props.course
             })
         }
 
-        if (courses.length === 0) {
+        if (authors.length === 0) {
             loadAuthors().catch(error => {
-                alert("Loading authors failed" + error)
+                alert("Loading authors failed" + error);
             })
         }
-    }, [])
+    }, [props.course])
 
     function handleChange(event) {
         const {
