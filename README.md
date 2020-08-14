@@ -96,3 +96,5 @@
 * Take screenshots
 * Add screenshots to README
 * Dust sandals and move on
+
+[![Run on Repl.it](https://repl.it/badge/github/dqve/React-course-Manager)](https://repl.it/github/dqve/React-course-Manager)
